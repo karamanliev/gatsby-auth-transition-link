@@ -6,9 +6,9 @@ import Details from "../components/Details";
 import Login from "../components/Login";
 import PrivateRoute from "../components/PrivateRoute";
 
-const App = () => (
+const App = ({ location }) => (
     <Layout>
-        <Router>
+        <Router location={location}>
             <PrivateRoute path="/app/details" component={Details} />
             <PrivateRoute path="/app/profile" component={Profile} />
             <Login path="/app/login" />
